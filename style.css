@@ -75,6 +75,19 @@ ol li {
   text-align: left;
 }
 
+.changeBg {
+  background-color: rgb(49, 47, 47) !important;
+  /* height: 100vh; */
+}
+
+.move-pic:hover {
+  transform: translateY(-5%);
+}
+
+/* h1 {
+  font-weight: bolder;
+} */
+
 /* .clicked-review {
   display: flex;
   justify-content: space-evenly;
