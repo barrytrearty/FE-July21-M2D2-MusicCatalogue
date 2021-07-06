@@ -33,103 +33,9 @@
       </div>
     </div>
 
-    <div class="jumbotron changeBg">
-      <h1 class="display-1">Radio Barry</h1>
-    </div>
-
     <div class="container">
-      <!-- <h1>Music of Me</h1> -->
       <h2 id="albums">Albums</h2>
-      <div class="row">
-        <div class="col-6 col-md-4 col-lg-3 album-box">
-          <div class="p-1">
-            <h3>Arctic Monkeys</h3>
-            <img src="album-covers/arctic-monkeys.png" alt="arctic-monkeys" />
-            <h4 class="long-album-name">
-              Whatever People Say I Am, That's What I'm Not
-            </h4>
-          </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 album-box">
-          <div class="p-1">
-            <h3>Red Hot Chilli Peppers</h3>
-            <img src="album-covers/californication.png" alt="" />
-            <h4>Californication</h4>
-          </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 album-box">
-          <div class="p-1">
-            <h3>Dr Dre</h3>
-            <img src="album-covers/chronic-dre.png" alt="" />
-            <h4>The Chronic: 2001</h4>
-          </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 album-box">
-          <div class="p-1">
-            <h3>Tom Waits</h3>
-            <img src="album-covers/closing-time.png" alt="" />
-            <h4>Closing Time</h4>
-          </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 album-box">
-          <div class="p-1">
-            <h3>T-Rex</h3>
-            <img src="album-covers/electric-warrior.png" alt="" />
-            <h4>Electric Warrior</h4>
-          </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 album-box">
-          <div class="p-1">
-            <h3>Eminem</h3>
-            <img src="album-covers/eminem-show.png" alt="" />
-            <h4>The Eminem Show</h4>
-          </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 album-box">
-          <div class="p-1">
-            <h3>Arcade Fire</h3>
-            <img src="album-covers/funeral.png" alt="" />
-            <h4>Funeral</h4>
-          </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 album-box">
-          <div class="p-1">
-            <h3>Kendrick Lamar</h3>
-            <img src="album-covers/good-kid-mad-city.png" alt="" />
-            <h4>Good Kid, M.A.A.D City</h4>
-          </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 album-box">
-          <div class="p-1">
-            <h3>Hozier</h3>
-            <img src="album-covers/hozier.png" alt="" />
-            <h4>Hozier</h4>
-          </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 album-box">
-          <div class="p-1">
-            <h3>Nas</h3>
-            <img src="album-covers/illimatic.png" alt="" />
-            <h4>Illmatic</h4>
-          </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 album-box">
-          <div class="p-1">
-            <h3>Kasabian</h3>
-            <img src="album-covers/kasabian.png" alt="" />
-            <h4 class="long-album-name">West Ryder Pauper Lunatic Asylum</h4>
-          </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 album-box">
-          <div class="p-1">
-            <h3>The Vaccines</h3>
-            <img src="album-covers/vaccines.png" alt="" />
-            <h4 class="long-album-name">
-              What Did You Expect from The Vaccines?
-            </h4>
-          </div>
-        </div>
-      </div>
+      <div id="album-boxes" class="row"></div>
     </div>
     <div class="container">
       <h2 id="description">Description</h2>
@@ -175,73 +81,11 @@
         id="tapestry-button"
         type="button"
         class="btn btn-outline-success"
+        onclick="displayTapestry(albumCovers)"";
       >
         Display Tapestry
       </button>
-      <div id="tapestry-row" class="row">
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <img class="move-pic" src="album-covers/vampire-weekend.PNG" alt="" />
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <img class="move-pic" src="album-covers/vaccines.png" alt="" />
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <img class="move-pic" src="album-covers/strokes.png" alt="" />
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <img class="move-pic" src="album-covers/sigh-no-more.png" alt="" />
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <img class="move-pic" src="album-covers/radiohead.png" alt="" />
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <img class="move-pic" src="album-covers/nevermind.png" alt="" />
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <img class="move-pic" src="album-covers/mgmt.png" alt="" />
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <img class="move-pic" src="album-covers/kasabian.png" alt="" />
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <img class="move-pic" src="album-covers/jake-bugg.png" alt="" />
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <img class="move-pic" src="album-covers/illimatic.png" alt="" />
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <img class="move-pic" src="album-covers/hozier.png" alt="" />
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <img
-            class="move-pic"
-            src="album-covers/good-kid-mad-city.png"
-            alt=""
-          />
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <img class="move-pic" src="album-covers/funeral.png" alt="" />
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <img class="move-pic" src="album-covers/eminem-show.png" alt="" />
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <img
-            class="move-pic"
-            src="album-covers/electric-warrior.png"
-            alt=""
-          />
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <img class="move-pic" src="album-covers/closing-time.png" alt="" />
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <img class="move-pic" src="album-covers/chronic-dre.png" alt="" />
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <img class="move-pic" src="album-covers/californication.png" alt="" />
-        </div>
-      </div>
+      <div id="tapestry-row" class="row"></div>
     </div>
 
     <footer>

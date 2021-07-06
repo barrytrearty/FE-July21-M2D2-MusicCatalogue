@@ -1,14 +1,177 @@
 "strict mode";
 
-const tapestryRow = document.getElementById("tapestry-row");
-const tapestryButton = document.getElementById("tapestry-button");
+// const tapestryRow = document.getElementById("tapestry-row");
+// const tapestryButton = document.getElementById("tapestry-button");
 
-const displayTapestry = function () {
-  if ((tapestryRow.style.visibility = "hidden")) {
-    tapestryRow.style.visibility = "visible";
-  } else if ((tapestryRow.style.visibility = "visible")) {
-    tapestryRow.style.visibility = "hidden";
+// const displayTapestry = function () {
+//   if ((tapestryRow.style.visibility = "hidden")) {
+//     tapestryRow.style.visibility = "visible";
+//   } else if ((tapestryRow.style.visibility = "visible")) {
+//     tapestryRow.style.visibility = "hidden";
+//   }
+// };
+
+// tapestryButton.addEventListener("click", displayTapestry);
+
+const albumBoxes = document.getElementById("album-boxes");
+const tapestryRow = document.getElementById("tapestry-row");
+
+const createAlbumBox = function (object) {
+  let albumDiv = document.createElement("div");
+
+  albumDiv.innerHTML = `<div class="card cardhover">
+  <img
+    src="album-covers/${object.cover}.png"
+    class="card-img-top"
+    alt"${object.artist}"
+  />
+  <h5 class="card-title">${object.artist}</h5>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      ${object.name}
+    </li>
+    <li class="list-group-item">Genre: ${object.genre}</li>
+    <li class="list-group-item">Release Date: ${object.releaseDate}</li>
+  </ul>
+</div>`;
+  albumDiv.classList.add("col-6", "col-md-4", "col-lg-3");
+  albumBoxes.appendChild(albumDiv);
+};
+
+const displayAlbumBoxes = function (arr) {
+  for (i = 0; i < arr.length; i++) {
+    createAlbumBox(arr[i]);
   }
 };
 
-tapestryButton.addEventListener("click", displayTapestry);
+const createTapestry = function (albumName) {
+  let tapestryTile = document.createElement("div");
+  tapestryTile.innerHTML = `<img class="move-pic" src="album-covers/${albumName}.png" alt="" />`;
+  tapestryTile.classList.add(
+    "col-12",
+    "col-sm-6",
+    "col-md-4",
+    "col-lg-3",
+    "col-xl-2"
+  );
+  tapestryRow.appendChild(tapestryTile);
+};
+
+const displayTapestry = function (array) {
+  for (j = 0; j < array.length; j++) {
+    createTapestry(array[j]);
+  }
+};
+
+const albums = [
+  {
+    artist: "Arctic Monkeys",
+    name: " Whatever People Say I Am, That's What I'm Not",
+    genre: "Indie Rock",
+    releaseDate: 2006,
+    cover: "arctic-monkeys",
+  },
+  {
+    artist: "Red Hot Chilli Peppers",
+    name: "Californication",
+    genre: "Alternative Rock",
+    releaseDate: 1999,
+    cover: "californication",
+  },
+  {
+    artist: "Dr Dre",
+    name: "The Chronic: 2001",
+    genre: "Hip Hop",
+    releaseDate: 1999,
+    cover: "chronic-dre",
+  },
+  {
+    artist: "Tom Waits",
+    name: "Closing Time",
+    genre: "Folk",
+    releaseDate: 1973,
+    cover: "closing-time",
+  },
+  {
+    artist: "T-Rex",
+    name: "Electric Warrior",
+    genre: "Glam Rock",
+    releaseDate: 1971,
+    cover: "electric-warrior",
+  },
+  {
+    artist: "Eminem",
+    name: "The Eminem Show",
+    genre: "Hip Hop",
+    releaseDate: 2002,
+    cover: "eminem-show",
+  },
+  {
+    artist: "Arcade Fire",
+    name: "Funeral",
+    genre: "Indie Rock",
+    releaseDate: 2004,
+    cover: "funeral",
+  },
+  {
+    artist: "Kendrick Lamar",
+    name: "Good Kid, M.A.A.D City",
+    genre: "Hip Hop",
+    releaseDate: 2012,
+    cover: "good-kid-mad-city",
+  },
+  {
+    artist: "Hozier",
+    name: "Hozier",
+    genre: "Blues",
+    releaseDate: 2014,
+    cover: "hozier",
+  },
+  {
+    artist: "Nas",
+    name: "Illmatic",
+    genre: "Hip Hop",
+    releaseDate: 1994,
+    cover: "illimatic",
+  },
+  {
+    artist: "Kasabian",
+    name: "West Ryder Pauper Lunatic Asylum",
+    genre: "Indie Rock",
+    releaseDate: 2009,
+    cover: "kasabian",
+  },
+  {
+    artist: "The Vaccines",
+    name: " What Did You Expect from The Vaccines?",
+    genre: "Indie Rock",
+    releaseDate: 2011,
+    cover: "vaccines",
+  },
+];
+
+const albumCovers = [
+  "vampire-weekend",
+  "vaccines",
+  "strokes",
+  "sigh-no-more",
+  "radiohead",
+  "nevermind",
+  "mgmt",
+  "kasabian",
+  "jake-bugg",
+  "illimatic",
+  "hozier",
+  "good-kid-mad-city",
+  "funeral",
+  "eminem-show",
+  "electric-warrior",
+  "closing-time",
+  "chronic-dre",
+  "californication",
+];
+
+// window.onload(
+displayAlbumBoxes(albums);
+// displayTapestry(albumCovers);
+// );
