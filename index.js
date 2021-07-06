@@ -16,17 +16,34 @@
 const albumBoxes = document.getElementById("album-boxes");
 const tapestryRow = document.getElementById("tapestry-row");
 
+const toggleDisplay = function (event) {
+  let element = event.target.closest(".card").childNodes[5];
+  console.log(element);
+  let selected = document.getElementsByClassName("selected")[0];
+  if (selected !== undefined) {
+    if (element.classList.contains("d-none")) {
+      selected.classList.add("d-none");
+      selected.classList.remove("selected");
+      element.classList.remove("d-none");
+      element.classList.add("selected");
+    }
+  } else {
+    element.classList.remove("d-none");
+    element.classList.add("selected");
+  }
+};
+
 const createAlbumBox = function (object) {
   let albumDiv = document.createElement("div");
 
-  albumDiv.innerHTML = `<div class="card cardhover">
+  albumDiv.innerHTML = `<div id="${object.id}" class="card cardhover">
   <img
     src="album-covers/${object.cover}.png"
     class="card-img-top"
     alt"${object.artist}"
   />
   <h5 class="card-title">${object.artist}</h5>
-  <ul class="list-group list-group-flush">
+  <ul class="list-group list-group-flush d-none">
     <li class="list-group-item">
       ${object.name}
     </li>
@@ -35,6 +52,7 @@ const createAlbumBox = function (object) {
   </ul>
 </div>`;
   albumDiv.classList.add("col-6", "col-md-4", "col-lg-3");
+  albumDiv.addEventListener("click", toggleDisplay);
   albumBoxes.appendChild(albumDiv);
 };
 
@@ -70,6 +88,7 @@ const albums = [
     genre: "Indie Rock",
     releaseDate: 2006,
     cover: "arctic-monkeys",
+    id: "001",
   },
   {
     artist: "Red Hot Chilli Peppers",
@@ -77,6 +96,7 @@ const albums = [
     genre: "Alternative Rock",
     releaseDate: 1999,
     cover: "californication",
+    id: "002",
   },
   {
     artist: "Dr Dre",
@@ -84,6 +104,7 @@ const albums = [
     genre: "Hip Hop",
     releaseDate: 1999,
     cover: "chronic-dre",
+    id: "003",
   },
   {
     artist: "Tom Waits",
@@ -91,6 +112,7 @@ const albums = [
     genre: "Folk",
     releaseDate: 1973,
     cover: "closing-time",
+    id: "004",
   },
   {
     artist: "T-Rex",
@@ -98,6 +120,7 @@ const albums = [
     genre: "Glam Rock",
     releaseDate: 1971,
     cover: "electric-warrior",
+    id: "005",
   },
   {
     artist: "Eminem",
@@ -105,6 +128,7 @@ const albums = [
     genre: "Hip Hop",
     releaseDate: 2002,
     cover: "eminem-show",
+    id: "006",
   },
   {
     artist: "Arcade Fire",
@@ -112,6 +136,7 @@ const albums = [
     genre: "Indie Rock",
     releaseDate: 2004,
     cover: "funeral",
+    id: "007",
   },
   {
     artist: "Kendrick Lamar",
@@ -119,6 +144,7 @@ const albums = [
     genre: "Hip Hop",
     releaseDate: 2012,
     cover: "good-kid-mad-city",
+    id: "008",
   },
   {
     artist: "Hozier",
@@ -126,6 +152,7 @@ const albums = [
     genre: "Blues",
     releaseDate: 2014,
     cover: "hozier",
+    id: "009",
   },
   {
     artist: "Nas",
@@ -133,6 +160,7 @@ const albums = [
     genre: "Hip Hop",
     releaseDate: 1994,
     cover: "illimatic",
+    id: "010",
   },
   {
     artist: "Kasabian",
@@ -140,6 +168,7 @@ const albums = [
     genre: "Indie Rock",
     releaseDate: 2009,
     cover: "kasabian",
+    id: "011",
   },
   {
     artist: "The Vaccines",
@@ -147,6 +176,7 @@ const albums = [
     genre: "Indie Rock",
     releaseDate: 2011,
     cover: "vaccines",
+    id: "012",
   },
 ];
 
