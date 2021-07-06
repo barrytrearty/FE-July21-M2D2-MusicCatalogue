@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#albums">Albums</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#description">Description</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tapestry">Tapestry</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Review</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container push-down">
+      <!-- <h1>Music of Me</h1> -->
+      <h2 id="albums">Albums</h2>
+      <div class="row">
+        <div class="col-6 col-md-4 col-lg-3 album-box">
+          <div class="p-1">
+            <h3>Arctic Monkeys</h3>
+            <img src="album-covers/arctic-monkeys.png" alt="arctic-monkeys" />
+            <h4 class="long-album-name">
+              Whatever People Say I Am, That's What I'm Not
+            </h4>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 album-box">
+          <div class="p-1">
+            <h3>Red Hot Chilli Peppers</h3>
+            <img src="album-covers/californication.png" alt="" />
+            <h4>Californication</h4>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 album-box">
+          <div class="p-1">
+            <h3>Dr Dre</h3>
+            <img src="album-covers/chronic-dre.png" alt="" />
+            <h4>The Chronic: 2001</h4>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 album-box">
+          <div class="p-1">
+            <h3>Tom Waits</h3>
+            <img src="album-covers/closing-time.png" alt="" />
+            <h4>Closing Time</h4>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 album-box">
+          <div class="p-1">
+            <h3>T-Rex</h3>
+            <img src="album-covers/electric-warrior.png" alt="" />
+            <h4>Electric Warrior</h4>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 album-box">
+          <div class="p-1">
+            <h3>Eminem</h3>
+            <img src="album-covers/eminem-show.png" alt="" />
+            <h4>The Eminem Show</h4>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 album-box">
+          <div class="p-1">
+            <h3>Arcade Fire</h3>
+            <img src="album-covers/funeral.png" alt="" />
+            <h4>Funeral</h4>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 album-box">
+          <div class="p-1">
+            <h3>Kendrick Lamar</h3>
+            <img src="album-covers/good-kid-mad-city.png" alt="" />
+            <h4>Good Kid, M.A.A.D City</h4>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 album-box">
+          <div class="p-1">
+            <h3>Hozier</h3>
+            <img src="album-covers/hozier.png" alt="" />
+            <h4>Hozier</h4>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 album-box">
+          <div class="p-1">
+            <h3>Nas</h3>
+            <img src="album-covers/illimatic.png" alt="" />
+            <h4>Illmatic</h4>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 album-box">
+          <div class="p-1">
+            <h3>Kasabian</h3>
+            <img src="album-covers/kasabian.png" alt="" />
+            <h4 class="long-album-name">West Ryder Pauper Lunatic Asylum</h4>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 album-box">
+          <div class="p-1">
+            <h3>The Vaccines</h3>
+            <img src="album-covers/vaccines.png" alt="" />
+            <h4 class="long-album-name">
+              What Did You Expect from The Vaccines?
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h2 id="description">Description</h2>
+      <div id="arctc-review" class="clicked-review">
+        <div class="album-box clicked">
+          <h3>Arctic Monkeys</h3>
+          <img src="album-covers/arctic-monkeys.png" alt="" />
+          <h4 class="release-date">2006</h4>
+        </div>
+        <div class="description-clicked">
+          <h4>Whatever People Say I Am, That's What I'm Not</h4>
+          <p>
+            A bold, brash debut that journeys through the thrill of a night on
+            the town and the shallow despair the morning after. Poetic lyrics
+            spat out by the prophetic Alex Turner cement this as a classic.
+          </p>
+          <ol>
+            <li>The View from the Afternoon</li>
+            <li>I Bet You Look Good on the Dancefloor</li>
+            <li>Fake Tales of San Francisco</li>
+            <li>Dancing Shoes</li>
+            <li>
+              You Probably Couldn't See for the Lights but You Were Staring
+              Straight at Me
+            </li>
+            <li>Still Take You Home</li>
+            <li>Riot Van</li>
+            <li>Red Light Indicates Doors Are Secured</li>
+            <li>Mardy Bum</li>
+            <li>Perhaps Vampires Is a Bit Strong But...</li>
+            <li>When the Sun Goes Down</li>
+            <li>From the Ritz to the Rubble</li>
+            <li>A Certain Romance</li>
+          </ol>
+          <a href="">LISTEN NOW</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 id="tapestry">Tapestry</h2>
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <img src="album-covers/vampire-weekend.PNG" alt="" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <img src="album-covers/vaccines.png" alt="" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <img src="album-covers/strokes.png" alt="" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <img src="album-covers/sigh-no-more.png" alt="" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <img src="album-covers/radiohead.png" alt="" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <img src="album-covers/nevermind.png" alt="" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <img src="album-covers/mgmt.png" alt="" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <img src="album-covers/kasabian.png" alt="" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <img src="album-covers/jake-bugg.png" alt="" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <img src="album-covers/illimatic.png" alt="" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <img src="album-covers/hozier.png" alt="" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <img src="album-covers/good-kid-mad-city.png" alt="" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <img src="album-covers/funeral.png" alt="" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <img src="album-covers/eminem-show.png" alt="" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <img src="album-covers/electric-warrior.png" alt="" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <img src="album-covers/closing-time.png" alt="" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <img src="album-covers/chronic-dre.png" alt="" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <img src="album-covers/californication.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="#albums">Back to top</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#"
+                  >LinkedIn <span class="sr-only">LinkedIn</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Spotify</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Github</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#">Disabled</a>
+              </li> -->
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
