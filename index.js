@@ -1,36 +1,12 @@
 "strict mode";
 
-// const tapestryRow = document.getElementById("tapestry-row");
-// const tapestryButton = document.getElementById("tapestry-button");
-
-// const displayTapestry = function () {
-//   if ((tapestryRow.style.visibility = "hidden")) {
-//     tapestryRow.style.visibility = "visible";
-//   } else if ((tapestryRow.style.visibility = "visible")) {
-//     tapestryRow.style.visibility = "hidden";
-//   }
-// };
-
-// tapestryButton.addEventListener("click", displayTapestry);
-
 const albumBoxes = document.getElementById("album-boxes");
 const tapestryRow = document.getElementById("tapestry-row");
+const tapestryButton = document.getElementById("tapestry-button");
 
 const toggleDisplay = function (event) {
   let element = event.target.closest(".card").childNodes[5];
-  console.log(element);
-  let selected = document.getElementsByClassName("selected")[0];
-  if (selected !== undefined) {
-    if (element.classList.contains("d-none")) {
-      selected.classList.add("d-none");
-      selected.classList.remove("selected");
-      element.classList.remove("d-none");
-      element.classList.add("selected");
-    }
-  } else {
-    element.classList.remove("d-none");
-    element.classList.add("selected");
-  }
+  element.classList.toggle("d-none");
 };
 
 const createAlbumBox = function (object) {
@@ -51,7 +27,7 @@ const createAlbumBox = function (object) {
     <li class="list-group-item">Release Date: ${object.releaseDate}</li>
   </ul>
 </div>`;
-  albumDiv.classList.add("col-6", "col-md-4", "col-lg-3");
+  albumDiv.classList.add("col-6", "col-md-4", "col-lg-3", "album-box");
   albumDiv.addEventListener("click", toggleDisplay);
   albumBoxes.appendChild(albumDiv);
 };
@@ -78,6 +54,7 @@ const createTapestry = function (albumName) {
 const displayTapestry = function (array) {
   for (j = 0; j < array.length; j++) {
     createTapestry(array[j]);
+    tapestryButton.remove();
   }
 };
 
