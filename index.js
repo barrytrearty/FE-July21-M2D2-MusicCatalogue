@@ -51,7 +51,17 @@ const createTapestry = function (albumName) {
   tapestryRow.appendChild(tapestryTile);
 };
 
+const shuffleArray = function (array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    let temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+};
+
 const displayTapestry = function (array) {
+  shuffleArray(array);
   for (j = 0; j < array.length; j++) {
     createTapestry(array[j]);
     tapestryButton.remove();
@@ -176,6 +186,12 @@ const albumCovers = [
   "closing-time",
   "chronic-dre",
   "californication",
+  "dogrel",
+  "an-awesome-wave",
+  "hot-fuss",
+  "nwa",
+  "the-libertines",
+  "grand-corps-malade",
 ];
 
 // window.onload(
